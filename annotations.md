@@ -55,7 +55,7 @@ class VehicleRestController {
 ```
 **@Entity Annotation:** This annotation specifies that the class is an entity: The entity name defaults to the name of the class. We can change its name using the name element.
 ```
-    @Entity(name="student")
+@Entity(name="student")
 public class Student {    
     // fields, getters and setters    
 }
