@@ -1,6 +1,6 @@
 ### Annotations:
 ```
-@Autowired: Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data type.
+**@Autowired:** Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data type.
 class Car { 
     Engine engine; 
     @Autowired 
@@ -8,7 +8,7 @@ class Car {
   this.engine = engine; 
     } 
 }
-@Controller: The @Controller is a class-level annotation. It is a specialization of @Component. It marks a class as a web request handler. It is often used to serve web pages. By default, it returns a string that indicates which route to redirect. It is mostly used with @RequestMapping annotation.
+**@Controller:** The @Controller is a class-level annotation. It is a specialization of @Component. It marks a class as a web request handler. It is often used to serve web pages. By default, it returns a string that indicates which route to redirect. It is mostly used with @RequestMapping annotation.
 @RequestMapping: It is used to map the web requests. It has many optional elements like consumes, header, method, name, params, path, produces, and value. We use it with the class as well as the method.
 @Controller 
 class VehicleController { 
@@ -17,11 +17,11 @@ class VehicleController {
     } 
 }
 
-@Service: This is an alternative to @Component that specifies you intend to use the class as part of your service layer. It is also used at class level. It tells the Spring that class contains the business logic.
+**@Service:** This is an alternative to @Component that specifies you intend to use the class as part of your service layer. It is also used at class level. It tells the Spring that class contains the business logic.
 
-@Repository: It is a class-level annotation. This annotation marks a class as part of your data layer, for handling storage, retrieval, and search. The repository is a DAOs (Data Access Object) that access the database directly. The repository does all the operations related to the database.
+**@Repository:** It is a class-level annotation. This annotation marks a class as part of your data layer, for handling storage, retrieval, and search. The repository is a DAOs (Data Access Object) that access the database directly. The repository does all the operations related to the database.
 
-@SpringBootApplication: it replaced three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration since version 1.2. It enables Java configuration and lets you use Spring Beans in the class. It enables component scanning and means controller classes and components you create can be discovered by the framework. It also enables Spring Boot’s autoconfiguration. 
+**@SpringBootApplication:** it replaced three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration since version 1.2. It enables Java configuration and lets you use Spring Beans in the class. It enables component scanning and means controller classes and components you create can be discovered by the framework. It also enables Spring Boot’s autoconfiguration. 
 @SpringBootApplication
 class VehicleApplication {
 
@@ -29,32 +29,32 @@ class VehicleApplication {
         SpringApplication.run(VehicleApplication.class, args);
     }
 }
-@PostMapping: It maps the HTTP POST requests on the specific handler method. It is used to create a web service endpoint that creates It is used. 
+**@PostMapping:** It maps the HTTP POST requests on the specific handler method. It is used to create a web service endpoint that creates It is used. 
 @PostMapping("/create") 
 void createVehicle(@RequestBody Vehicle vehicle) { 
 // ... 
 }
-@RequestBody: It is used to bind HTTP request with an object in a method parameter. Internally it uses HTTP MessageConverters to convert the body of the request. When we annotate a method parameter with @RequestBody, the Spring framework binds the incoming HTTP request body to that parameter.
-@ResponseBody: It binds the method return value to the response body. It tells the Spring Boot Framework to serialize a return an object into JSON and XML format.
+**@RequestBody:** It is used to bind HTTP request with an object in a method parameter. Internally it uses HTTP MessageConverters to convert the body of the request. When we annotate a method parameter with @RequestBody, the Spring framework binds the incoming HTTP request body to that parameter.
+**@ResponseBody:** It binds the method return value to the response body. It tells the Spring Boot Framework to serialize a return an object into JSON and XML format.
 @ResponseBody 
 @RequestMapping("/hello") 
 String hello() { 
     return "Hello World!"; 
 }
-@RestController: It can be considered as a combination of @Controller and @ResponseBody annotations. It eliminates the need for annotating each method with @ResponseBody.
+**@RestController:** It can be considered as a combination of @Controller and @ResponseBody annotations. It eliminates the need for annotating each method with @ResponseBody.
 @RestController
 class VehicleRestController {
     // ...
 }
-@Entity Annotation: This annotation specifies that the class is an entity: The entity name defaults to the name of the class. We can change its name using the name element.
+**@Entity Annotation:** This annotation specifies that the class is an entity: The entity name defaults to the name of the class. We can change its name using the name element.
 @Entity(name="student")
 public class Student {    
     // fields, getters and setters    
 }
-@Table: This annotation specifies the table in the database with which this entity is mapped. Schema name helps to distinguish one set of tables from another. If we do not use the @Table annotation, the name of the entity will be considered the name of the table.
-@Id: This annotation specifies the primary key of the entity. 
-@GeneratedValue: This annotation specifies the generation strategies for the values of primary keys. We can choose from four id generation strategies with the strategy element. The value can be AUTO, TABLE, SEQUENCE, or IDENTITY.
-@Column: is used to specify the mapping between a basic entity attribute and the database table column. The @Column annotation has many elements such as name, length, nullable, and unique.
+**@Table:** This annotation specifies the table in the database with which this entity is mapped. Schema name helps to distinguish one set of tables from another. If we do not use the @Table annotation, the name of the entity will be considered the name of the table.
+**@Id:** This annotation specifies the primary key of the entity. 
+**@GeneratedValue:** This annotation specifies the generation strategies for the values of primary keys. We can choose from four id generation strategies with the strategy element. The value can be AUTO, TABLE, SEQUENCE, or IDENTITY.
+**@Column:** is used to specify the mapping between a basic entity attribute and the database table column. The @Column annotation has many elements such as name, length, nullable, and unique.
 
 @Entity
 @Table(name = "student")
