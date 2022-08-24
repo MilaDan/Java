@@ -1,6 +1,6 @@
 ### Annotations:
-```
-__@Autowired:__ **Spring**  provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data type.
+
+__@Autowired:__ Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data type.
 class Car { 
     Engine engine; 
     @Autowired 
