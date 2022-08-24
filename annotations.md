@@ -1,6 +1,7 @@
 ### Annotations:
 
 __@Autowired:__ Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data type.
+```
 class Car { 
     Engine engine; 
     @Autowired 
@@ -8,6 +9,7 @@ class Car {
   this.engine = engine; 
     } 
 }
+```
 **@Controller:** The @Controller is a class-level annotation. It is a specialization of @Component. It marks a class as a web request handler. It is often used to serve web pages. By default, it returns a string that indicates which route to redirect. It is mostly used with @RequestMapping annotation.
 @RequestMapping: It is used to map the web requests. It has many optional elements like consumes, header, method, name, params, path, produces, and value. We use it with the class as well as the method.
 @Controller 
@@ -47,7 +49,8 @@ class VehicleRestController {
     // ...
 }
 **@Entity Annotation:** This annotation specifies that the class is an entity: The entity name defaults to the name of the class. We can change its name using the name element.
-@Entity(name="student")
+
+    @Entity(name="student")
 public class Student {    
     // fields, getters and setters    
 }
@@ -70,7 +73,7 @@ public class Student {
 
     // getters and setters
 }
-```
+
 ### 2. Explain how the below annotations specify the table in database?
 ```
 The @Column annotation is used to specify the mapping between a basic entity attribute and the database table column. the default value will be present in the SQL table definition by using @columnDefinition. The name of the column is “STUDENT_NAME” and the length is 50 and the value in the column is not null and is not unique. 
